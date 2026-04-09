@@ -28,8 +28,19 @@ aws_access_key_id = st.text_input("AWS Access Key ID", type="password")
 aws_secret_access_key = st.text_input("AWS Secret Access Key", type="password")
 region = st.text_input("AWS Region", value="us-east-1")
 
-download_dir = Path(st.text_input("Download folder", value=str(Path.cwd() / "ieee_dataport_downloads")))
+download_dir_input = st.text_input(
+    "Choose download directory",
+    value="",
+    placeholder="Enter full folder path, for example C:/Users/YourName/Downloads or /home/user/data"
+)
+
+if download_dir_input.strip():
+    download_dir = Path(download_dir_input.strip())
+else:
+    download_dir = Path.cwd() / "ieee_dataport_downloads"
+
 safe_mkdir(download_dir)
+st.caption(f"Files will be saved to: {download_dir}")
 
 uris_text = st.text_area(
     "S3 URIs",
