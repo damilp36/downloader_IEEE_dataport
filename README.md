@@ -1,6 +1,6 @@
 # IEEE DataPort Streamlit Downloader
 
-GitHub repository: [https://github.com/damilp36/IEEE_dataports](https://github.com/damilp36/IEEE_dataports)
+GitHub repository: [https://github.com/damilp36/downloader_IEEE_dataport](https://github.com/damilp36/downloader_IEEE_dataport)
 
 This repository provides a Streamlit based web application for downloading datasets from IEEE DataPort using official AWS S3 credentials. IEEE DataPort hosts datasets in a private Amazon S3 bucket, and access is granted through personal AWS Access Keys associated with a DataPort account.
 
@@ -38,7 +38,7 @@ This tool simplifies downloading one or multiple dataset files by pasting their 
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/damilp36/IEEE_dataports.git
+git clone https://github.com/damilp36/downloader_IEEE_dataport.git
 cd IEEE
 pip install streamlit boto3
 ```
